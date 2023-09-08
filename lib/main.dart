@@ -12,9 +12,9 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomeActivity(),
-      debugShowCheckedModeBanner: false,
-      title: ("Assignment5"),
-      theme: ThemeData(primarySwatch: Colors.green),
+      debugShowCheckedModeBanner: true,
+      title: ("Module5LiveTest"),
+      theme: ThemeData(primarySwatch: Colors.blue),
       darkTheme: ThemeData(primarySwatch: Colors.brown),
     );
   }
@@ -27,35 +27,25 @@ class HomeActivity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
-        elevation: 70,
-        title: Text("Home"),
+        toolbarHeight: 70,
+        elevation: 20,
+        title: Text(
+          "Profile",
+          style: TextStyle(fontSize: 25),
+        ),
         titleSpacing: 0,
         centerTitle: true,
-        backgroundColor: Colors.green,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.add_business_sharp),
-        ),
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("This is mod 5 Assignment",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 25),),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("My ",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500,color: Colors.pink),),
-                Text("phone ",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: Colors.blue)),
-                Text("name ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500,color: Colors.purple)),
-                Text("Your phone name",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500,color: Colors.amber)),
-
-              ],
-            )
+            Icon(Icons.person_pin,color: Colors.green,size: 50,),//Specific Icon couldn't found
+            Text("Jhon Doe",style: TextStyle(color: Colors.green,fontSize: 25,fontWeight: FontWeight.w500),),
+            Text("Flutter Batch 4",style: TextStyle(color: Colors.blue,fontSize: 20,fontWeight: FontWeight.w500),)
           ],
-        )
+        ),
       ),
     );
   }
